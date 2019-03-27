@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gYs-Kd-oox">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="6Er-GH-8gU">
+            <objects>
+                <viewController id="gYs-Kd-oox" customClass="CMBCardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zYz-fP-pUc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="hfw-Qn-Hyc">
+                                <rect key="frame" x="87" y="215.5" width="240" height="465.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ihG-8b-FGY">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="395"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suit Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBk-TS-kdy">
+                                        <rect key="frame" x="82.5" y="445" width="75.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="465.5" id="1Pr-aR-YfX"/>
+                                    <constraint firstAttribute="width" constant="240" id="1eF-4f-SXf"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ny-dq-KJc">
+                                <rect key="frame" x="100" y="781" width="214" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Draw a Card">
+                                    <color key="titleColor" red="0.12041027098894119" green="0.82062828540802002" blue="0.94088441133499146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="newCardButtonTapped:" destination="gYs-Kd-oox" eventType="touchUpInside" id="Ftw-uQ-SQN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7aK-9w-Bkk" firstAttribute="trailing" secondItem="4Ny-dq-KJc" secondAttribute="trailing" constant="100" id="CF9-BZ-t4H"/>
+                            <constraint firstItem="hfw-Qn-Hyc" firstAttribute="centerX" secondItem="zYz-fP-pUc" secondAttribute="centerX" id="CVE-c5-GoH"/>
+                            <constraint firstItem="4Ny-dq-KJc" firstAttribute="leading" secondItem="7aK-9w-Bkk" secondAttribute="leading" constant="100" id="ChB-BR-qUV"/>
+                            <constraint firstItem="4Ny-dq-KJc" firstAttribute="top" secondItem="hfw-Qn-Hyc" secondAttribute="bottom" constant="100" id="G0a-CD-bjn"/>
+                            <constraint firstItem="hfw-Qn-Hyc" firstAttribute="centerY" secondItem="zYz-fP-pUc" secondAttribute="centerY" id="aJt-O8-GKD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7aK-9w-Bkk"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="cardImage" destination="ihG-8b-FGY" id="ibB-GZ-pJA"/>
+                        <outlet property="cardLabel" destination="lBk-TS-kdy" id="XbE-YM-KBa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ReN-T8-JTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52.173913043478265" y="167.41071428571428"/>
+        </scene>
+    </scenes>
+</document>
